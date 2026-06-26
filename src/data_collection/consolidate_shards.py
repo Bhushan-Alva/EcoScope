@@ -1,5 +1,5 @@
 """
-Consolidate per-city-year shards (data/weather_core/shards/cityNNN_yearYYYY.parquet)
+Consolidate per-city-year shards (data/raw/weather/shards/cityNNN_yearYYYY.parquet)
 into the final year_YYYY.parquet files that the rest of the project
 (Solar module, etc.) actually reads from.
 
@@ -18,7 +18,7 @@ import pandas as pd
 from pathlib import Path
 from collections import defaultdict
 
-OUTPUT_DIR = Path("data/weather_core")
+OUTPUT_DIR = Path("data/raw/weather")
 SHARD_DIR = OUTPUT_DIR / "shards"
 
 SHARD_PATTERN = re.compile(r"city(\d+)_year(\d+)\.parquet")

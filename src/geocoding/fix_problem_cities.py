@@ -1,5 +1,6 @@
 """
-Fix script for the 4 problem rows from city_list_with_coords.csv:
+Fix script for the 4 problem rows from
+data/metadata/city_list_with_coords.csv:
 
 1. Vasai-Virar       -> try "Vasai" (twin-city name, geocoder likely
                          only knows the individual towns, not the
@@ -67,9 +68,9 @@ def main():
     print(f"\n{'='*60}")
     print("Review the '<-- STATE MATCHES' lines above.")
     print("Once you've picked the right coordinate for each, manually edit")
-    print("city_list_with_coords.csv: fill in latitude/longitude for rows")
-    print("29, 32, 60, and REPLACE row 54's (wrong) coordinate with the")
-    print("correct Gurugram one - do not just relabel the status column,")
+    print("data/metadata/city_list_with_coords.csv: fill in latitude/longitude")
+    print("for rows 29, 32, 60, and REPLACE row 54's (wrong) coordinate with")
+    print("the correct Gurugram one - do not just relabel the status column,")
     print("the actual lat/lon for Gurgaon in the file is wrong.")
 
 

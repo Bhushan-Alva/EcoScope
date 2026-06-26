@@ -19,8 +19,8 @@ from pathlib import Path
 
 from fetch_core import fetch_city_year, attach_city_metadata
 
-OUTPUT_DIR = Path("data/weather_core")
-CITIES_CSV = "city_list_with_coords_fixed.csv"
+OUTPUT_DIR = Path("data/raw/weather")
+CITIES_CSV = "data/metadata/city_list_with_coords_fixed.csv"
 
 
 def main():

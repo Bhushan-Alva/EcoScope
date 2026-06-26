@@ -1,6 +1,6 @@
 """
 Retry cities that failed during backfill_by_year.py (saved to
-data/weather_core/failed_YYYY.csv) and append any that now succeed
+data/raw/weather/failed_YYYY.csv) and append any that now succeed
 into the existing year_YYYY.parquet file.
 
 Usage:
@@ -15,7 +15,7 @@ from pathlib import Path
 
 from fetch_core import fetch_city_year, attach_city_metadata
 
-OUTPUT_DIR = Path("data/weather_core")
+OUTPUT_DIR = Path("data/raw/weather")
 
 
 def retry_year(year):

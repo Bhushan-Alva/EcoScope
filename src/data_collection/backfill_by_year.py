@@ -1,5 +1,5 @@
 """
-Initial backfill: builds data/weather_core/year_YYYY.parquet for each
+Initial backfill: builds data/raw/weather/year_YYYY.parquet for each
 year from START_YEAR to the current year, each file containing ALL
 cities in city_list_with_coords_fixed.csv.
 
@@ -35,9 +35,9 @@ from pathlib import Path
 from fetch_core import fetch_city_year, attach_city_metadata, HOURLY_VARS
 
 START_YEAR = 2021
-OUTPUT_DIR = Path("data/weather_core")
+OUTPUT_DIR = Path("data/raw/weather")
 SHARD_DIR = OUTPUT_DIR / "shards"
-CITIES_CSV = "city_list_with_coords_fixed.csv"
+CITIES_CSV = "data/metadata/city_list_with_coords_fixed.csv"
 
 DAILY_BUDGET = 7000  # 70% of the 10,000/day limit, leaving margin for
                       # retries, other scripts, and any other Open-Meteo

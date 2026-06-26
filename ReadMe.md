@@ -2,82 +2,108 @@
 
 ## Overview
 
-EcoScope is a modular Environmental Intelligence Platform that transforms historical weather and climate observations into actionable insights through data analytics, forecasting, machine learning, and interactive dashboards.
+EcoScope is a modular Environmental Intelligence Platform that
+transforms historical weather and climate observations into actionable
+insights through data analytics, forecasting, machine learning, and
+interactive dashboards.
 
-The platform is designed around a shared environmental dataset that supports multiple decision-support modules rather than a single application. Although development currently focuses on selected cities in India, the project is designed to support additional countries and regions in the future.
+The platform is built around one shared weather/climate dataset (100
+Indian cities, hourly, 2021-present) that supports multiple
+decision-support modules rather than a single application. Although
+development currently focuses on selected cities in India, the data
+schema is designed to support additional countries and regions later
+(see `docs/data_dictionary.md` for columns kept specifically for that,
+e.g. snow variables that are ~0 for India today).
 
-The first implemented module is Solar Energy Potential Assessment, with additional modules planned for agriculture, wind energy, logistics, tourism, disaster management, urban climate analysis, and weather-driven demand forecasting.
+The first module being built is Solar Energy Potential Assessment.
+Eight further modules are scoped but not started - see `docs/modules.md`.
 
 ## Current Status
 
-* ✅ Historical weather dataset collected
-* ✅ Data validation completed
-* 🚧 Data audit and exploratory analysis in progress
-* ⏳ Feature engineering
+* ✅ 100-city list defined, geocoded, and verified
+* ✅ Historical weather dataset collected (2021-01-01 to 2026-06-24, all
+  100 cities, zero gaps/duplicates/nulls)
+* ✅ Data audit notebook run (`01_data_audit.ipynb`)
+* 🚧 One open data-quality bug: Mysore is geocoded ~123 km from the
+  actual city (matched a Bengaluru locality) - not yet fixed, see
+  `docs/change_log.md`
+* ⏳ Exploratory data analysis (notebooks 02-07)
+* ⏳ Solar Site Selection Score
 * ⏳ Forecasting
-* ⏳ Machine learning
-* ⏳ Streamlit dashboard
+* ⏳ Machine learning (regression, classification, clustering, anomaly
+  detection)
+* ⏳ Streamlit dashboard (6 pages planned)
 * ⏳ Power BI dashboard
+
+See `docs/roadmap.md` for the full phase-by-phase breakdown, including
+individual notebooks, dashboard pages, and pvlib modules still to be
+used.
 
 ## Planned Modules
 
-* Solar Energy Potential
-* Crop & Irrigation Advisor
+* Solar Energy Potential *(in progress)*
 * Wind Energy Assessment
+* Crop & Irrigation Advisor
 * Construction & Outdoor Work Scheduler
 * Cold Chain & Logistics Risk
 * Tourism Insights
 * Disaster Early Warning
 * Urban Heat Island Analysis
-* Weather Driven Retail Demand
+* Weather-Driven Retail Demand
 
 ## Technologies
 
-Python • Pandas • NumPy • PyArrow • Plotly • Scikit-learn • XGBoost • PVLib • Streamlit • Power BI
+Python • Pandas • NumPy • PyArrow • Plotly • Scikit-learn • XGBoost •
+PVLib • Streamlit • Power BI
 
+## Documentation Files
 
-# Documentation Files
+| File | Description |
+| --- | --- |
+| **ReadMe.md** | Overview of the project, current status, technologies, and planned modules. Main entry point for the repository. |
+| **docs/architecture.md** | How the platform is organized: layers, data flow from raw collection through to each module. |
+| **docs/data_dictionary.md** | Every dataset column: data type, unit, range, description, and which module it's intended for. |
+| **docs/data_sources.md** | The weather, geocoding, and population-ranking sources used, and why each storage/partitioning choice was made. |
+| **docs/methodology.md** | The analytical methods used so far (and planned), with their current build status. |
+| **docs/modules.md** | Every planned module, its purpose, the variables it needs, and its actual build status. |
+| **docs/roadmap.md** | Full phase-by-phase plan, broken down to individual notebooks, dashboard pages, and library modules - not just phase names. |
+| **docs/folder_structure.md** | What each directory holds, and which ones are populated vs. still empty scaffolding. |
+| **docs/assumptions.md** | Assumptions, caveats, and known limitations - what the data and analysis can and can't honestly claim. |
+| **docs/change_log.md** | Chronological record of what's been built, what bugs were found, and what's still open. |
 
-| File                    | Description                                                                                                                                                                                         |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **README.md**           | Provides an overview of the EcoScope project, its objectives, current progress, technologies used, and planned environmental intelligence modules. Acts as the main entry point for the repository. |
-| **architecture.md**     | Describes the overall organization of the platform, including the major system components, data flow, and relationships between different modules.                                                  |
-| **data_dictionary.md**  | Documents every dataset column, including its data type, unit, description, and intended analytical purpose. Serves as the reference guide for understanding the dataset.                           |
-| **data_sources.md**     | Summarizes the weather and geographic data sources used in the project, including dataset coverage, variables collected, and general characteristics of the data.                                   |
-| **methodology.md**      | Explains the analytical methodology followed throughout the project, including data validation, exploratory analysis, feature engineering, forecasting, and machine learning approaches.            |
-| **modules.md**          | Provides an overview of all existing and planned environmental intelligence modules, their objectives, and the types of insights each module delivers.                                              |
-| **roadmap.md**          | Outlines the planned development phases, milestones, and future enhancements for the project.                                                                                                       |
-| **folder_structure.md** | Describes the purpose of each directory and how project files are organized to support scalability and maintainability.                                                                             |
-| **assumptions.md**      | Lists project assumptions, analytical limitations, and scope boundaries to ensure transparency and proper interpretation of results.                                                                |
-| **changelog.md**        | Maintains a chronological record of major project updates, new features, bug fixes, and completed milestones.                                                                                       |
+## Project Modules
 
+| Module | Status | Description |
+| --- | --- | --- |
+| **Solar Energy Potential** | In progress | Evaluates historical solar resources, estimates theoretical energy generation, compares cities, supports solar site selection. |
+| **Wind Energy Assessment** | Not started | Structural twin of Solar - same pattern, different physics. Wind speed/direction at hub height already collected. |
+| **Crop & Irrigation Advisor** | Not started | Crop growth, evapotranspiration, rainfall, and irrigation planning. |
+| **Construction & Outdoor Work Scheduler** | Not started | Favorable weather windows for outdoor work, using rainfall, temperature, wind, heat-stress signals. |
+| **Cold Chain & Logistics Risk** | Not started | Environmental risk to temperature-sensitive transportation. |
+| **Tourism & Weather Insights** | Not started | Seasonal weather patterns and favorable travel periods. |
+| **Disaster Early Warning** | Not started | Unusual weather patterns that may signal increased risk of extreme events. Reuses Solar's anomaly detection approach. |
+| **Urban Heat Island Analysis** | Not started | Temperature variation across urban areas - needs additional geographic data beyond point coordinates. |
+| **Weather-Driven Retail Demand** | Not started | Relationships between weather and consumer demand. |
 
-# Project Modules
+## Project Notebooks
 
-| Module                                    | Description                                                                                                                                                          |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Solar Energy Potential**                | Evaluates historical solar resources, estimates theoretical energy generation, compares cities, and supports solar site selection through analytics and forecasting. |
-| **Crop & Irrigation Advisor**             | Analyzes weather conditions affecting crop growth, evapotranspiration, rainfall, and irrigation planning to support agricultural decision-making.                    |
-| **Wind Energy Assessment**                | Evaluates wind resources using historical wind speed and direction data to estimate renewable energy potential across different locations.                           |
-| **Construction & Outdoor Work Scheduler** | Identifies favorable weather windows for construction and outdoor activities by analyzing rainfall, temperature, wind, and other environmental conditions.           |
-| **Cold Chain & Logistics Risk**           | Assesses environmental risks affecting temperature-sensitive transportation by monitoring weather conditions that may impact product quality.                        |
-| **Tourism & Weather Insights**            | Examines seasonal weather patterns and climate conditions to identify favorable travel periods and support tourism planning.                                         |
-| **Disaster Early Warning**                | Detects unusual weather patterns and environmental anomalies that may indicate increased risk of extreme weather events.                                             |
-| **Urban Heat Island Analysis**            | Investigates temperature variations across urban areas to identify regions experiencing elevated heat exposure.                                                      |
-| **Weather-Driven Retail Demand**          | Explores relationships between weather conditions and consumer demand to support weather-informed business planning.                                                 |
+| Notebook | Status | Description |
+| --- | --- | --- |
+| **01_data_audit.ipynb** | ✅ Done | Validates completeness, consistency, and integrity of the historical weather dataset before analysis. |
+| **02_univariate_analysis.ipynb** | ⏳ Not started | Statistical distribution of each weather variable independently. |
+| **03_time_series_analysis.ipynb** | ⏳ Not started | Temporal trends, seasonal cycles, monthly patterns, long-term changes. |
+| **04_city_comparison.ipynb** | ⏳ Not started | Compares weather characteristics and solar resources across cities. |
+| **05_correlation_analysis.ipynb** | ⏳ Not started | Relationships between weather variables and solar energy potential. |
+| **06_geospatial_analysis.ipynb** | ⏳ Not started | Geographic variation via interactive maps and spatial comparisons. |
+| **07_feature_engineering.ipynb** | ⏳ Not started | Derived variables and features for forecasting/ML. |
+| **08_solar_score.ipynb** | ⏳ Not started | Composite solar suitability score for comparing locations. |
+| **09_forecasting.ipynb** | ⏳ Not started | Time-series forecasting models for future solar energy generation. |
+| **10_machine_learning.ipynb** | ⏳ Not started | Regression, classification, clustering, and anomaly detection models. |
 
+## Known Open Issues
 
-# Project Notebooks
+See `docs/change_log.md` for the full history. The two currently open:
 
-| Notebook                          | Description                                                                                                                     |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **01_data_audit.ipynb**           | Validates the completeness, consistency, and integrity of the historical weather dataset before analysis.                       |
-| **02_univariate_analysis.ipynb**  | Examines the statistical distribution of each weather variable independently to understand its characteristics and variability. |
-| **03_time_series_analysis.ipynb** | Explores temporal trends, seasonal cycles, monthly patterns, and long-term changes in weather variables.                        |
-| **04_city_comparison.ipynb**      | Compares weather characteristics and solar resources across different cities using aggregated statistics and rankings.          |
-| **05_correlation_analysis.ipynb** | Investigates relationships between weather variables and identifies factors influencing solar energy potential.                 |
-| **06_geospatial_analysis.ipynb**  | Visualizes geographic variation in environmental variables using interactive maps and spatial comparisons.                      |
-| **07_feature_engineering.ipynb**  | Creates derived variables and analytical features to support forecasting and machine learning models.                           |
-| **08_solar_score.ipynb**          | Develops a composite solar suitability score for comparing locations based on multiple environmental factors.                   |
-| **09_forecasting.ipynb**          | Builds and evaluates time-series forecasting models for estimating future solar energy generation.                              |
-| **10_machine_learning.ipynb**     | Develops predictive machine learning models for regression, classification, clustering, and anomaly detection.                  |
+* Mysore's geocoded coordinate is ~123 km from the actual city.
+* `add_new_city.py` is not yet reconciled with the budget-aware shard
+  system used by the main backfill script.

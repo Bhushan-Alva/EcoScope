@@ -3,8 +3,8 @@ Step 1 of the 100-city pipeline: geocode every city in city_list.py
 using Open-Meteo's free geocoding API, filtered to India, disambiguated
 by state where a name is ambiguous (e.g. multiple "Hyderabad" worldwide).
 
-Output: city_list_with_coords.csv - the master file the backfill
-script will read from.
+Output: data/metadata/city_list_with_coords.csv - the master file the
+backfill script will read from.
 """
 
 import requests
@@ -73,10 +73,10 @@ def main():
         time.sleep(0.15)  # be polite, well under any rate limit
 
     df = pd.DataFrame(rows)
-    df.to_csv("city_list_with_coords.csv", index=False)
+    df.to_csv("data/metadata/city_list_with_coords.csv", index=False)
 
     print(f"\n{'='*60}")
-    print(f"Done. Saved to city_list_with_coords.csv")
+    print(f"Done. Saved to data/metadata/city_list_with_coords.csv")
     print(f"  OK: {(df['geocode_status']=='OK').sum()}")
     print(f"  Warnings (state mismatch, used first India match): "
           f"{(df['geocode_status']=='STATE_MISMATCH_USED_FIRST_INDIA_MATCH').sum()}")
