@@ -48,54 +48,54 @@ rank,name,state,tier,latitude,longitude,matched_name,geocode_status
 47,Chandigarh,Chandigarh,2,30.73629,76.7884,Chandigarh,OK
 48,Guwahati,Assam,2,26.1844,91.7458,Guwahati,OK
 49,Solapur,Maharashtra,2,17.67152,75.91044,Solapur,OK
-50,Hubli-Dharwad,Karnataka,2,15.45,75.0,Hubli-Dharwad,OK
+50,Hubli-Dharwad,Karnataka,2,15.45,75,Hubli-Dharwad,OK
 51,Bareilly,Uttar Pradesh,2,28.36678,79.43167,Bareilly,OK
-52,Mysore,Karnataka,2,12.95515,77.55292,Mysore Road Tolgate,OK
-53,Moradabad,Uttar Pradesh,2,28.83893,78.77684,Morādābād,OK
-54,Gurgaon,Haryana,2,28.4601,77.0263,Gurugram (renamed from Gurgaon),OK_MANUAL_FIX_WAS_WRONG_STATE
-55,Aligarh,Uttar Pradesh,2,27.88145,78.07464,Aligarh,OK
-56,Jalandhar,Punjab,2,31.32556,75.57917,Jalandhar,OK
-57,Tiruchirappalli,Tamil Nadu,2,10.8155,78.69651,Tiruchirappalli,OK
-58,Bhubaneswar,Odisha,2,20.27241,85.83385,Bhubaneswar,OK
-59,Salem,Tamil Nadu,2,11.65376,78.15538,Salem,OK
-60,Mira-Bhayandar,Maharashtra,2,19.2836,72.8675,Mira Road (Mira-Bhayandar),OK_MANUAL_FIX
-61,Thiruvananthapuram,Kerala,2,8.4855,76.94924,Thiruvananthapuram,OK
-62,Bhiwandi,Maharashtra,2,19.30023,73.05881,Bhiwandi,OK
-63,Saharanpur,Uttar Pradesh,2,29.9679,77.54522,Sahāranpur,OK
-64,Gorakhpur,Uttar Pradesh,2,26.76628,83.36889,Gorakhpur,OK
-65,Guntur,Andhra Pradesh,2,16.29974,80.45729,Guntur,OK
-66,Amravati,Maharashtra,2,20.93333,77.75,Amravati,OK
-67,Bikaner,Rajasthan,2,28.01762,73.31495,Bikaner,OK
-68,Noida,Uttar Pradesh,2,28.58,77.33,Noida,OK
-69,Jamshedpur,Jharkhand,2,22.80278,86.18545,Jamshedpur,OK
-70,Bhilai,Chhattisgarh,2,21.20919,81.4285,Bhilai,OK
-71,Warangal,Telangana,2,18.0,79.58333,Warangal,OK
-72,Cuttack,Odisha,2,20.46497,85.87927,Cuttack,OK
-73,Firozabad,Uttar Pradesh,2,27.15092,78.39781,Firozabad,OK
-74,Kochi,Kerala,2,9.93988,76.26022,Kochi,OK
-75,Bhavnagar,Gujarat,2,21.76287,72.15331,Bhavnagar,OK
-76,Dehradun,Uttarakhand,3,30.32443,78.03392,Dehradun,OK
-77,Durgapur,West Bengal,3,23.51583,87.30801,Durgapur,OK
-78,Asansol,West Bengal,3,23.68333,86.98333,Asansol,OK
-79,Nanded,Maharashtra,3,19.16023,77.31497,Nanded,OK
-80,Kolhapur,Maharashtra,3,16.69563,74.23167,Kolhāpur,OK
-81,Ajmer,Rajasthan,3,26.4521,74.63867,Ajmer,OK
-82,Kalaburagi,Karnataka,3,17.33583,76.83757,Kalaburagi,OK
-83,Loni,Uttar Pradesh,3,28.75143,77.29023,Loni,OK
-84,Ujjain,Madhya Pradesh,3,23.18239,75.77643,Ujjain,OK
-85,Siliguri,West Bengal,3,26.71004,88.42851,Siliguri,OK
-86,Ulhasnagar,Maharashtra,3,19.21667,73.15,Ulhasnagar,OK
-87,Jhansi,Uttar Pradesh,3,25.45887,78.57994,Jhānsi,OK
-88,Sangli,Maharashtra,3,16.85438,74.56417,Sangli,OK
-89,Jammu,Jammu and Kashmir,3,32.73528,74.86167,Jammu,OK
-90,Nellore,Andhra Pradesh,3,14.44992,79.98697,Nellore,OK
-91,Mangalore,Karnataka,3,12.84654,74.84056,Mangalore Tota,OK
-92,Belgaum,Karnataka,3,15.85929,74.61829,Belgaum Airport,OK
-93,Jamnagar,Gujarat,3,22.47292,70.06673,Jamnagar,OK
-94,Tirunelveli,Tamil Nadu,3,8.72742,77.6838,Tirunelveli,OK
-95,Malegaon,Maharashtra,3,20.54966,74.53462,Malegaon,OK
-96,Gaya,Bihar,3,24.79686,85.00385,Gaya,OK
-97,Ambattur,Tamil Nadu,3,13.09818,80.16152,Ambattur,OK
-98,Jalgaon,Maharashtra,3,21.00292,75.56602,Jalgaon,OK
-99,Udaipur,Rajasthan,3,24.58584,73.71346,Udaipur,OK
-100,Maheshtala,West Bengal,3,22.50862,88.25322,Maheshtala,OK
+52,Moradabad,Uttar Pradesh,2,28.83893,78.77684,Morādābād,OK
+53,Gurgaon,Haryana,2,28.4601,77.0263,Gurugram (renamed from Gurgaon),OK_MANUAL_FIX_WAS_WRONG_STATE
+54,Aligarh,Uttar Pradesh,2,27.88145,78.07464,Aligarh,OK
+55,Jalandhar,Punjab,2,31.32556,75.57917,Jalandhar,OK
+56,Tiruchirappalli,Tamil Nadu,2,10.8155,78.69651,Tiruchirappalli,OK
+57,Bhubaneswar,Odisha,2,20.27241,85.83385,Bhubaneswar,OK
+58,Salem,Tamil Nadu,2,11.65376,78.15538,Salem,OK
+59,Mira-Bhayandar,Maharashtra,2,19.2836,72.8675,Mira Road (Mira-Bhayandar),OK_MANUAL_FIX
+60,Thiruvananthapuram,Kerala,2,8.4855,76.94924,Thiruvananthapuram,OK
+61,Bhiwandi,Maharashtra,2,19.30023,73.05881,Bhiwandi,OK
+62,Saharanpur,Uttar Pradesh,2,29.9679,77.54522,Sahāranpur,OK
+63,Gorakhpur,Uttar Pradesh,2,26.76628,83.36889,Gorakhpur,OK
+64,Guntur,Andhra Pradesh,2,16.29974,80.45729,Guntur,OK
+65,Amravati,Maharashtra,2,20.93333,77.75,Amravati,OK
+66,Bikaner,Rajasthan,2,28.01762,73.31495,Bikaner,OK
+67,Noida,Uttar Pradesh,2,28.58,77.33,Noida,OK
+68,Jamshedpur,Jharkhand,2,22.80278,86.18545,Jamshedpur,OK
+69,Bhilai,Chhattisgarh,2,21.20919,81.4285,Bhilai,OK
+70,Warangal,Telangana,2,18,79.58333,Warangal,OK
+71,Cuttack,Odisha,2,20.46497,85.87927,Cuttack,OK
+72,Firozabad,Uttar Pradesh,2,27.15092,78.39781,Firozabad,OK
+73,Kochi,Kerala,2,9.93988,76.26022,Kochi,OK
+74,Bhavnagar,Gujarat,2,21.76287,72.15331,Bhavnagar,OK
+75,Dehradun,Uttarakhand,3,30.32443,78.03392,Dehradun,OK
+76,Durgapur,West Bengal,3,23.51583,87.30801,Durgapur,OK
+77,Asansol,West Bengal,3,23.68333,86.98333,Asansol,OK
+78,Nanded,Maharashtra,3,19.16023,77.31497,Nanded,OK
+79,Kolhapur,Maharashtra,3,16.69563,74.23167,Kolhāpur,OK
+80,Ajmer,Rajasthan,3,26.4521,74.63867,Ajmer,OK
+81,Kalaburagi,Karnataka,3,17.33583,76.83757,Kalaburagi,OK
+82,Loni,Uttar Pradesh,3,28.75143,77.29023,Loni,OK
+83,Ujjain,Madhya Pradesh,3,23.18239,75.77643,Ujjain,OK
+84,Siliguri,West Bengal,3,26.71004,88.42851,Siliguri,OK
+85,Ulhasnagar,Maharashtra,3,19.21667,73.15,Ulhasnagar,OK
+86,Jhansi,Uttar Pradesh,3,25.45887,78.57994,Jhānsi,OK
+87,Sangli,Maharashtra,3,16.85438,74.56417,Sangli,OK
+88,Jammu,Jammu and Kashmir,3,32.73528,74.86167,Jammu,OK
+89,Nellore,Andhra Pradesh,3,14.44992,79.98697,Nellore,OK
+90,Mangalore,Karnataka,3,12.84654,74.84056,Mangalore Tota,OK
+91,Belgaum,Karnataka,3,15.85929,74.61829,Belgaum Airport,OK
+92,Jamnagar,Gujarat,3,22.47292,70.06673,Jamnagar,OK
+93,Tirunelveli,Tamil Nadu,3,8.72742,77.6838,Tirunelveli,OK
+94,Malegaon,Maharashtra,3,20.54966,74.53462,Malegaon,OK
+95,Gaya,Bihar,3,24.79686,85.00385,Gaya,OK
+96,Ambattur,Tamil Nadu,3,13.09818,80.16152,Ambattur,OK
+97,Jalgaon,Maharashtra,3,21.00292,75.56602,Jalgaon,OK
+98,Udaipur,Rajasthan,3,24.58584,73.71346,Udaipur,OK
+99,Maheshtala,West Bengal,3,22.50862,88.25322,Maheshtala,OK
+100,Mysore,Karnataka,2,12.2958,76.6394,Mysore,OK_MANUAL_ADD
